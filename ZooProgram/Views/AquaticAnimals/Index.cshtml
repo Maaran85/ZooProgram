@@ -1,0 +1,32 @@
+﻿@model IEnumerable<ZooProgram.Models.AnimalsViewModel>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Index</h2>
+
+<table class="table table-dark table-hover">
+    <tr>
+        <th>Aquatic Animals Name</th>
+        <th>No Of Animals</th>
+        <th>Gender</th>
+
+    </tr>
+
+@foreach (var item in Model) {
+<tr>
+    <td>
+        @item.AnimalName
+    </td>
+    <td>
+        @item.Count
+    </td>
+    <td>
+        @item.Gender
+    </td>
+</tr>
+}
+
+</table>
